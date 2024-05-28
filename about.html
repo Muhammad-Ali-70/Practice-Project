@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MyShop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            padding: 50px;
+            text-align: center;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .about-content h1 {
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            line-height: 1.6;
+        }
+        .decorative {
+            margin: 20px 0;
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            border-radius: 50%;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="https://via.placeholder.com/40" alt="Logo"> MyShop</div>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </nav>
+    <div class="container">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>Welcome to MyShop! We are dedicated to providing you with the best products at the best prices. Our mission is to offer a wide variety of high-quality products to our customers and ensure a seamless shopping experience.</p>
+            <div class="decorative"></div>
+            <p>Our team works tirelessly to source the best products from around the world and bring them to you at unbeatable prices. Thank you for choosing MyShop!</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
