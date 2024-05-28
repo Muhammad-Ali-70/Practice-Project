@@ -14,7 +14,7 @@ pipeline {
                 '''
                 // Then copy new files from Jenkins workspace to the remote server
                 sh '''
-                    gcloud compute scp --recurse /var/lib/jenkins/workspace/Dev-Op-Project_main/* root@devops-apache-server:/var/www/html --zone=us-central1-a
+                    gcloud compute scp --recurse /var/lib/jenkins/workspace/Practice-Project_main/* root@devops-apache-server:/var/www/html --zone=us-central1-a
                 '''
             }
         }
